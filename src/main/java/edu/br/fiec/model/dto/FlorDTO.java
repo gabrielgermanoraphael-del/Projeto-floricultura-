@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Repository
 
 public class FlorDTO {
 
