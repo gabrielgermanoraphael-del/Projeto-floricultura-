@@ -25,7 +25,7 @@ public class Pedidos {
 
     private Integer quantidade;
 
-    private Clientes cliente_id;
+    private Integer cliente_id;
 
     private String observacao;
 
