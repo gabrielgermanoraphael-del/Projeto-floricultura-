@@ -1,4 +1,4 @@
-package edu.br.fiec.model;
+package edu.br.fiec.model.entity;
 
 
 import jakarta.persistence.Entity;
