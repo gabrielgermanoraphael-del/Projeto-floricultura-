@@ -26,6 +26,8 @@ public class Flores {
 
     private String especie;
 
+    private String estagio_Crescimento;
+
     private Double preco_unitario;
 
     private Integer longevidade;
