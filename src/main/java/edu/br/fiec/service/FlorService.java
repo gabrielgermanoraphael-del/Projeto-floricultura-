@@ -1,7 +1,7 @@
 package edu.br.fiec.service;
 
 import edu.br.fiec.model.dto.FlorDTO;
-import edu.br.fiec.repository.FlorRepo;
+import edu.br.fiec.repository.FlorRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.stream.Collector;
 
 public class FlorService {
 
-    private final FlorRepo florRepo;
+    private final FlorRepository florRepo;
 
     public List<FlorDTO> listarTodos() {
         return florRepo.findAll()

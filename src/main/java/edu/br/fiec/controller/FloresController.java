@@ -21,14 +21,14 @@ public class FloresController {
     private FlorService florService;
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping(value = "Flor", consumes = APPLICATION_JSON_VALUE)
-    public void criarFlor(@ResponseBody FlorDTO florDTO){
+    @PostMapping(value = "Flor", consumes = APPLICATION_JSON_VALUE) // Sugestão: considerar mudar para "/" ou "/nova"
+    public void criarFlor(@RequestBody FlorDTO florDTO){
         florService.criarFlor(florDTO);
     }
 
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping(value = "Flores", produces = APPLICATION_JSON_VALUE)
+    @GetMapping(value = "Flores", produces = APPLICATION_JSON_VALUE) // Sugestão: considerar mudar para "/"
     public List<Flores> buscarTodasFlores(){
         return florService.buscarTodasFlores();
 
@@ -36,7 +36,7 @@ public class FloresController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "{id}", produces = APPLICATION_JSON_VALUE)
-    public Flores buscarFloresPorId(@RequestParam Integer id){
+    public Flores buscarFloresPorId(@PathVariable Integer id){ // Corrigido para @PathVariable
         return florService.buscarFloresPorId(id);
     }
 
@@ -49,12 +49,9 @@ public class FloresController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "estagio_crescimento", produces = APPLICATION_JSON_VALUE)
-    public List<Flores> buscarFloresPorEstagio(RequestParam String estagio_Crescimento){
-        return florService.buscarFloresporEstagio(estagio)
+    public List<Flores> buscarFloresPorEstagio(@RequestParam String estagio_Crescimento){ // Corrigido o nome da variável
+
+        return florService.buscarFloresporEstagio(estagio_Crescimento); // Corrigido o uso da variável
     }
-
-
-
-
 
 }
