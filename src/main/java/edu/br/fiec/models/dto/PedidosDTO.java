@@ -1,4 +1,4 @@
-package edu.br.fiec.model.dto;
+package edu.br.fiec.models.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -17,5 +17,7 @@ public class PedidosDTO {
     private Integer cliente_id;
 
     private String observacao;
+
+    private String status;
 
 }

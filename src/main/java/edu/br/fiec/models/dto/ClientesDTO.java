@@ -1,4 +1,4 @@
-package edu.br.fiec.model.dto;
+package edu.br.fiec.models.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClieteDTO {
+public class ClientesDTO {
 
     private String nome;
 

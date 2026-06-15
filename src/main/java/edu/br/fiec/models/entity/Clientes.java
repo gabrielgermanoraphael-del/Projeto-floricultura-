@@ -1,5 +1,4 @@
-package edu.br.fiec.model.entity;
-
+package edu.br.fiec.models.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,8 +14,9 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 
 
-@Table(name = "flores")
-public class Flores {
+@Table(name = "cliente")
+public class Clientes {
+
 
     @Id
     @GeneratedValue
@@ -24,13 +24,13 @@ public class Flores {
 
     private String nome;
 
-    private String especie;
+    private Long cpf;
 
-    private String estagio_Crescimento;
+    private String email;
 
-    private Double preco_unitario;
+    private  String telefone;
 
-    private Integer longevidade;
+    private String endereco;
 
-    private String descricao;
+
 }
